@@ -46,10 +46,43 @@ me = {
     "age": 37
 }
 
+print(me)
 # modify
 me["age"]=99
 me["age"]=85
 # get the values
 print(me["firstName"])
 
-print(me)
+# create a calculator using functions
+
+
+# function
+def printMenu():
+    print("[1]Sum")
+    print("[2]Subtract")
+    print("[3]Multiplication")
+    print("[4]Division")
+
+# plain instructions
+printMenu()
+opt = input("Select the option ")
+
+number1=float(input("please give me the first number "))
+number2=float(input("please give me the second number "))
+
+if opt=="1":
+    total= number1 + number2
+    print("the total is: " + str(total))
+elif opt=="2":
+    total= number1 - number2
+    print("the total is: " + str(total))
+elif opt=="3":
+    total= number1 * number2
+    print("the total is: " + str(total))
+elif opt=="4":
+    if number2 == 0:
+        print("you cannot divide by 0")
+    else:
+        total= number1 / number2
+        print("the total is: " + str(total))
+
