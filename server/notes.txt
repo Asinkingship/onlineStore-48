@@ -1,0 +1,10 @@
+to install the virtualenv
+-py -m pip install virtualenv
+
+to create a new virtualenv
+-py -m venv venv
+
+to activate the virtualenv
+
+mac: source venv/bin/activate
+pc:  venv\Scripts\activate
