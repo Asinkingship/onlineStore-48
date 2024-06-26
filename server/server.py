@@ -1,5 +1,6 @@
 from flask import Flask, request
 import json
+from config import db
 
 items = []
 
@@ -22,19 +23,24 @@ def about():
 # JSON
 # create an API to perfom a get request this utl: /api/about
 # return your name as a message
+products = []
+
+def fix_id(obj):
+    obj["_id"] =str(obj["_id"])
+    return obj
 
 @app.post("/api/products")
 def saveProducts():
-    product = request.get_json()
-    print (product)
-    # mock the save
-    items.append(product)
-    return json.dumps(product)
+    newItem = request.get_json()
+    print (newItem)
+    db.products.insert_one(newItem)
+    # products.append(newItem)
+    return json.dumps(fix_id(newItem))
     
 
 
 @app.get("/api/products")
-def getProduct():
-    return json.dumps()
+def get_Product():
+    return json.dumps(products)
 
 app.run(debug = True)

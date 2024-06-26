@@ -8,3 +8,6 @@ to activate the virtualenv
 
 mac: source venv/bin/activate
 pc:  venv\Scripts\activate
+
+import mongo
+import certifi
