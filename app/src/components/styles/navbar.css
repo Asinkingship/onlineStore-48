@@ -1,0 +1,21 @@
+/* .menu{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    height: 50px;
+    align-items: center;
+    background-color: black;
+}
+
+
+a{
+    text-transform: uppercase;
+    font-size: 18px;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+a:hover{
+    color: red;
+} */
