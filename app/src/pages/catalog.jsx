@@ -51,7 +51,7 @@ const data = [
 
 function Catalog(){
     return(
-        <div className="catalog">
+        <div className="catalog page">
             <h1>Check our amazing catalog!</h1>
 
             {/*map to buttopn*/}

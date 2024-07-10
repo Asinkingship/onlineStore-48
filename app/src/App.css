@@ -3,7 +3,7 @@
 }
 
 body{
-  background-color: lightgrey;
+  background-color: rgb(179, 176, 176);
 }
 
 .App-logo {
@@ -39,4 +39,8 @@ body{
   to {
     transform: rotate(360deg);
   }
+}
+
+.page{
+  min-height: calc(100vh - 115px);
 }

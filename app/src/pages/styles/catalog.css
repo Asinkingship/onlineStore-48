@@ -1,4 +1,6 @@
-
+.catalog-page{
+    background-color: rgb(179, 176, 176);
+}
 .catalog h1 {
     color: black;
     text-align: center;

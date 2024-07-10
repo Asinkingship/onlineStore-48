@@ -3,19 +3,30 @@ import Navbar from './components/navbar';
 import Footer from './components/footer';
 import Catalog from './pages/catalog';
 import AboutUs from './pages/aboutUs';
+import Home from './pages/home';
+
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import './App.css';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className='App'>   
     
-      <Navbar></Navbar>
-      <Catalog></Catalog>
-      <AboutUs></AboutUs>
-      <Footer></Footer>
-    </div>   
+      <Navbar/>
+
+      <Routes>
+        <Route exact path="/" element={<Home/>} />
+        <Route exact path="/catalog" element={<Catalog />} />
+        <Route exact path="/about" element={<AboutUs />} />
+      </Routes>
+
+      <Footer/>
+    </div>  
+    
+    </BrowserRouter> 
   );
 }
 

@@ -26,7 +26,7 @@ function AboutUS(){
     }
 
     return(
-        <div className="about">
+        <div className="about page">
             <h1>About Us</h1>
             <div className="aboutInfo">
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus enim porro, aperiam vel dolorem unde debitis adip</p>
