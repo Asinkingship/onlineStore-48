@@ -1,0 +1,21 @@
+
+
+.adminHome .parent{
+    display: flex;
+}
+
+.adminHome .sec-prods{
+    flex: 4;
+
+}
+.adminHome .sec-coupons{
+    flex: 4;
+    
+}
+.adminHome .form {
+    background-color: white;
+    border: 1px solid #817f7f;
+    border-radius: 4px;
+    margin: 5px 30px;
+    padding: 10px;
+}
