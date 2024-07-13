@@ -1,7 +1,13 @@
 import './styles/navbar.css';
 import {Link} from 'react-router-dom';
+import { useContext } from 'react';
+import DataContext from '../state/dataContext';
 
 function Navbar(){
+
+  const user = useContext(DataContext).user;
+
+
     return(
 
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -32,8 +38,10 @@ function Navbar(){
       </ul>
 
       <form className="d-flex" role="search">
+
+      <button className="btn btn-outline-light">{user.name}</button>
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
+        <button className="btn btn btn-dark" type="submit">Search</button>
       </form>
     </div>
   </div>

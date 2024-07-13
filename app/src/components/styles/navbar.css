@@ -19,3 +19,8 @@ a{
 a:hover{
     color: red;
 } */
+
+.container-fluid{
+    background-color: #0B8BE0;
+}
+
