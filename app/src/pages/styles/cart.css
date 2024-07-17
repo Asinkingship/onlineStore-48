@@ -1,0 +1,39 @@
+.cart .parent{
+    display: flex;
+}
+
+.cart .cartMenu{
+    flex: 2;
+}
+
+.cart .cartList{
+    flex: 5;
+}
+
+.cart .cartForm {
+    background-color: white;
+    border: 1px solid #030303;
+    border-radius: 4px;
+    margin: 5px 30px;
+    padding: 10px;
+}
+
+.cart .flexed {
+    display: flex;
+    align-items: center;
+}
+
+
+.cart .cartForm h5 {
+    flex: 3;
+}
+
+.cart .cartForm label {
+    flex: 1;
+}
+
+
+.cart .cartForm img{
+    width: 100px;
+    max-height: 80px;
+}

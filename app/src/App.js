@@ -5,6 +5,7 @@ import Catalog from './pages/catalog';
 import AboutUs from './pages/aboutUs';
 import Home from './pages/home';
 import Admin from './pages/admin';
+import CartPage from './pages/cart';
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -26,6 +27,7 @@ function App() {
         <Route exact path="/catalog" element={<Catalog />} />
         <Route exact path="/about" element={<AboutUs />} />
         <Route exact path="/admin" element={<Admin />} />
+        <Route exact path="/Cart" element={<CartPage />} />
       </Routes>
 
       <Footer/>

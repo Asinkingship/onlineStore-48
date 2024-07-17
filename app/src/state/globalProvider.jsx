@@ -4,7 +4,14 @@ function GlobalProvider(props){
     const [cart, setCart]= useState([]);
     const [user, setUser]= useState({name: "KB"});
 
-    function addProductToCart(){
+    function addProductToCart(product){
+        console.log("Global fn");
+
+        var copy = [...cart];
+        copy.push(product);
+        setCart(copy);
+
+
     }
 
     function resetCart(){
