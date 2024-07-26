@@ -30,17 +30,37 @@ def fix_id(obj):
     return obj
 
 @app.post("/api/products")
-def saveProducts():
+def save_product():
     newItem = request.get_json()
-    print (newItem)
     db.products.insert_one(newItem)
-    # products.append(newItem)
     return json.dumps(fix_id(newItem))
     
 
 
 @app.get("/api/products")
-def get_Product():
-    return json.dumps(products)
+def get_Products():
+
+    cursor = db.products.find({})
+    results = []    
+    for prod in cursor:
+        results.append(fix_id(prod))
+
+
+    return json.dumps(results)
+
+@app.get("/api/categories")
+def get_categories():
+
+    cursor = db.products.find({})
+    cats = []
+    for prod in cursor:
+        cat = prod["category"]
+        if cat not in cats:
+            cats.append(prod["category"])
+
+    return json.dumps(cats)
 
 app.run(debug = True)
+
+
+

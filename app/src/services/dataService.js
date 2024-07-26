@@ -18,7 +18,7 @@ const data = [
     },
     {
         "title": "Strawberry",
-        "price": 6.999,
+        "price": 6.99,
         "catagory": "fruit",
         "image": "strawberry.jpg",
         "_id": "3"
