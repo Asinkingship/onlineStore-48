@@ -47,7 +47,7 @@ function Navbar(){
 
         
         <Link className="btn btn btn-dark" type="submit">
-          {cart.length} Items in Cart
+          {cart.length} <i class="fa-solid fa-cart-shopping"></i>
         </Link>
       </form>
     </div>
