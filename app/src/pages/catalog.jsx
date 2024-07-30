@@ -11,14 +11,28 @@ function Catalog(){
 
     //do something when the  cmp loads
     useEffect(function() {
-        console.log("Catalog loaded");
 
-        const prods = dataService.getProducts();
-        setProducts(prods);
+        loadCatalog()
+        loadCategories()
 
-        const cats = dataService.getCategories();
-        setCategories(cats);  
+        
     }, []);
+
+    async function loadCatalog(){
+
+        let prods = await dataService.getProducts();
+        setProducts(prods);
+        console.log(prods);
+
+    }
+
+    async function loadCategories(){
+        
+        let cats = await dataService.getCategories();
+        setCategories(cats);
+        console.log(cats);
+
+    }
     
     
     

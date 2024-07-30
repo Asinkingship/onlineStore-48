@@ -1,4 +1,6 @@
 
+import axios from "axios";
+
 const categories = ['Fruit', 'Meat', 'Beverages'];
 
 const data = [
@@ -34,7 +36,7 @@ const data = [
         "title": "Watermelon",
         "price": 22.99,
         "catagory": "fruit",
-        "image": "watermellon.jpg",
+        "image": "watermelon.jpg",
         "_id": "5"
     },
     {
@@ -48,16 +50,20 @@ const data = [
 
 class DataService{
 
-    getProducts(){
-        return data;
+    async getProducts(){
+        // return data;
 
+        let response = await axios.get ("http://127.0.0.1:5000/api/products")
+        return response.data
         // todo;  call the server and get the products
 
     }
 
-    getCategories(){
-        return categories;
+    async getCategories(){
+        // return categories;
 
+        let response = await axios.get ("http://127.0.0.1:5000/api/categories")
+        return response.data
         // todo; call the server and get the categories
 
     }
