@@ -1,10 +1,12 @@
 from flask import Flask, request
 import json
 from config import db
+from flask_cors import CORS
 
 items = []
 
 app = Flask(__name__)
+CORS(app) 
 
 @app.get("/")
 def home():
